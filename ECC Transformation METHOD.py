@@ -1,3 +1,7 @@
+#This code is simply checking the transformation matrix. It takes the black and white TIF files as input and outputs the transformation.
+#Also outputs visual confirmation
+
+
 import cv2
 import numpy as np
 import glob
