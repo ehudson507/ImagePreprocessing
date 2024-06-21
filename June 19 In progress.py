@@ -83,7 +83,6 @@ def get_boundary_coord(contours, image_row, image_column):
 
     return bound
 
-
     return bound
 # Function to get the base directory from the user
 def get_base_directory():
@@ -91,8 +90,6 @@ def get_base_directory():
     root.withdraw()  # Hide the main window
     base_dir = filedialog.askdirectory(title="Select Base Directory")
     return base_dir
-
-
 
 def load_images_from_folder(folder):
     images = []
@@ -192,8 +189,6 @@ def register_images(base_image, images, mouse_number, body_part):
     
     return registered_images, transformation_matrices
 
-
-
 def generate_transformation_vector(base_image, mask_path):
     # Load images from the mask_path directory
     images = load_images_from_folder(mask_path)
@@ -248,12 +243,6 @@ def generate_transformation_vector(base_image, mask_path):
                 transVector[file] = None
     
     return transVector
-
-
-
-
-
-
 
 # Function to create directory structure and move files to the destination directory
 def organize_files(base_dir, processed_dir):
@@ -321,7 +310,6 @@ def transform_image_mod3(image_tile, transformation, level_factor):
 
     rows, cols = image_tile.shape[:2]
 
-
 # Apply the level factor to the translations
     translation_x *= level_factor
     translation_y *= level_factor
@@ -352,8 +340,6 @@ def transform_image_mod3(image_tile, transformation, level_factor):
     
     
     return transformed_image
-
-
 
 def match_file(file_name, transformation_vectors):
     # Extract numerical identifier from the file name
@@ -521,9 +507,6 @@ def find_json_files(processed_dir):
             if file.endswith(".json"):
                 json_files.append(os.path.join(root, file))
     return json_files
-
-
-
 
 def main():
     # Get the base directory from the user
